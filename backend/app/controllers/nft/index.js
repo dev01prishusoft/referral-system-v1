@@ -11,7 +11,6 @@ const generate = async (req, res) => {
       message: "Missing NFT ID Or User ID"
     });
   }
-
   const checkIfUserHasAlreadyGeneratedReferral = await getItemCustom(Referral, {
     userId: req.body.userId
   }, '_id');
